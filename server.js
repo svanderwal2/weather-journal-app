@@ -25,24 +25,25 @@ function listening() {
     console.log(`server is running on localhost: ${port}`);
 }
 
-// GET Route to return projectData
-app.get('/all', getData)
-function getData(req, res) {
-    res.send(projectData)
-}
+// GET Route
+app.get('/all', getData);
 
-// POST Route to projectData
-app.post('/addWeather', addWeather);
+function getData (request, response) {
+    response.send(projectData);
+    console.log(projectData);
+};
 
-function addWeather(req, res) {
+// POST Route
+app.post('/weatherData', addEntry);
 
-    newEntry = {
+function addEntry (req, res) {
+
+    newWeatherEntry = {
+        temperature: req.body.temperature,
         date: req.body.date,
-        temp: req.body.temp,
-        content: req.body.content
+        content: req.body.content,
     }
-
-    projectData.push(newEntry)
-    res.send(projectData)
-    console.log(projectData)
-}
+    projectData.push(newWeatherEntry);
+    res.send(newWeatherEntry)
+    console.log(projectData);
+};

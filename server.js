@@ -26,21 +26,22 @@ function listening() {
 }
 
 // GET Route
-app.get('/all', getData);
+app.get('/all', getProjData);
 
-function getData (request, response) {
+function getProjData (request, response) {
     response.send(projectData);
     console.log(projectData);
 };
 
 // POST Route
-app.post('/weatherData', addEntry);
+app.post('/addWeather', addEntry);
 
 function addEntry (req, res) {
 
     newWeatherEntry = {
-        temperature: req.body.temperature,
         date: req.body.date,
+        zip: req.body.zip,
+        temperature: req.body.temperature,
         content: req.body.content,
     }
     projectData.push(newWeatherEntry);

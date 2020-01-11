@@ -1,0 +1,92 @@
+/* BODY */
+
+body {
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+div.holder.headline {
+    display: block;
+    font-size: 45px;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: 800;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+}
+
+div#app {
+    margin: auto;
+    width: 60%;
+}
+
+div.main-container,
+div.second-container {
+    background-color: #fafcfd;
+    border: solid 0.5px #c0cedb;
+    border-radius: 8px;
+    -webkit-box-shadow: 6px 6px 32px 1px rgba(82,82,82,1);
+    -moz-box-shadow: 6px 6px 32px 1px rgba(82,82,82,1);
+    box-shadow: 6px 6px 32px 1px rgba(82,82,82,1);
+    margin: 75px auto;
+    padding: 30px 35px;
+    line-height: 3rem;
+}
+
+label {
+    font-size: 20px;
+}
+
+input#zip {
+    height: 25px;
+    width: 165px;
+    font-size: 14px;
+}
+
+div.holder.zip {
+    display: flex;
+    flex-direction: column;
+}
+
+div.holder.feel {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea#feelings.myInput {
+    font-size: 14px;
+}
+
+button#generate {
+    margin-top: 15px;
+    background-color: #b9d6f4;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 14px;
+    padding: 8px 0px;
+}
+
+div.title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #2f4785;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 1200px) {
+    
+    div#app {
+        width: 80%;
+    }
+
+    div.holder.headline {
+        font-size: 36px;
+        margin: 50px auto 25px;
+    }
+
+}

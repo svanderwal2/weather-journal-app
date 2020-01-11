@@ -1,5 +1,5 @@
 // Global Variables
-let baseURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
+let baseURL = 'http://api.openweathermap.org/data/2.5/weather?units=imperial&zip=';
 let apiKey = '&appid=256f753b823c9ae73d727fff31527a6b';
 
 // Create a new date instance dynamically with JS
@@ -43,7 +43,7 @@ const updateUI = async() => {
         console.log(allData);
         const date = document.getElementById('date').innerHTML = allData.date;
         const zip = document.getElementById('zip').innerHTML = allData.zip;
-        const temp = document.getElementById('temp').innerHTML = allData.tamp;
+        const temp = document.getElementById('temp').innerHTML = allData.temp;
         const content = document.getElementById('content').innerHTML = allData.feelings;
     } catch(error) {
         console.log('error', error);
@@ -62,7 +62,7 @@ async function performAction(e) {
         zip,
         temp,
         feelings
-    });
-    console.log(response)
-    const newUI = await updateUI();
+    }).then(setTimeout(function () {
+        updateUI();
+    }, 1000))
 };

@@ -44,7 +44,5 @@ function addEntry (req, res) {
         temperature: req.body.temperature,
         content: req.body.content,
     }
-    projectData.push(newWeatherEntry);
-    res.send(newWeatherEntry)
-    console.log(projectData);
+    Object.assign(projectData, newWeatherEntry);
 };

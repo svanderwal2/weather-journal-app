@@ -41,8 +41,8 @@ function addEntry (req, res) {
     newWeatherEntry = {
         date: req.body.date,
         zip: req.body.zip,
-        temperature: req.body.temperature,
-        content: req.body.content,
+        temperature: req.body.temp,
+        content: req.body.feelings,
     }
     Object.assign(projectData, newWeatherEntry);
 };

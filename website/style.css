@@ -76,6 +76,15 @@ div.title {
     color: #2f4785;
 }
 
+div#date,
+div#temp,
+div#content {
+    font-size: 20px;
+    color: #655b61;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+}
+
 /* MOBILE RESPONSIVE */
 
 @media(max-width: 1200px) {
